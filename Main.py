@@ -61,6 +61,7 @@ class Main:
                              memory_gb,
                              displays,
                              screen_size,
+                             screen_resolution,
                              graphics,
                              hdd_type,
                              hdd_gb)
@@ -75,6 +76,7 @@ class Main:
                     memory_gb,
                     displays,
                     screen_size,
+                    screen_resolution,
                     graphics,
                     hdd_type,
                     hdd_gb):
@@ -88,6 +90,7 @@ class Main:
             'memory_gb': memory_gb,
             'displays': displays,
             'screen_size': screen_size,
+            'screen_resolution': screen_resolution,
             'graphics': graphics,
             'hdd_type': hdd_type,
             'hdd_gb': hdd_gb,
