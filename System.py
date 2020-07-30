@@ -84,7 +84,8 @@ class System:
         disks = []
         for disk in output:
             split = disk.split()
-            size = str(split[1]).replace('\'\'', '').replace("G", "")
+            size = str(split[1]).replace('\'\'', '')
+            size = size[:-1]
             style = 'SSD' if split[0] == '0' else 'HDD'
             if float(size) > ignore_size:
                 disks.append(size + ' ' + style)
