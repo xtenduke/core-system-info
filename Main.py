@@ -2,10 +2,12 @@ import requests
 import os
 import time
 from dotenv import load_dotenv
-from src.system.System import System
+from System import System
+
 # load envvars
 
 load_dotenv()
+
 
 class Main:
     version = '1.0.0'
@@ -120,6 +122,7 @@ class Main:
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@""")
         print('CORE SYSTEM INFO')
         print('Version: ' + self.version + '\n')
+
 
 if __name__ == '__main__':
     main = Main()
