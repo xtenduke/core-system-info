@@ -84,11 +84,17 @@ class System:
         disks = []
         for disk in output:
             split = disk.split()
-            size = str(split[1]).replace('\'\'', '')
-            size = size[:-1]
+            sizeStr = str(split[1]).replace('\'\'', '')[:-1]
+
+            unit = sizeStr[-1]
+            if unit == 'M':
+                size = float(sizeStr) * 1000
+            else:
+                size = float(sizeStr)
+
             style = 'SSD' if split[0] == '0' else 'HDD'
             if float(size) > ignore_size:
-                disks.append(size + ' ' + style)
+                disks.append(str(size) + ' ' + style)
 
         return disks
 
