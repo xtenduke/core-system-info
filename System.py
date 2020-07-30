@@ -84,9 +84,10 @@ class System:
         disks = []
         for disk in output:
             split = disk.split()
-            sizeStr = str(split[1]).replace('\'\'', '')[:-1]
+            infoStr = str(split[1]).replace('\'\'', '')
+            unit = infoStr[-1]
+            sizeStr = infoStr[:-1]
 
-            unit = sizeStr[-1]
             if unit == 'M':
                 size = float(sizeStr) * 1000
             else:
