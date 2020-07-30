@@ -89,7 +89,7 @@ class System:
             sizeStr = infoStr[:-1]
 
             if unit == 'M':
-                size = float(sizeStr) * 1000
+                size = float(sizeStr) / 1000
             else:
                 size = float(sizeStr)
 
